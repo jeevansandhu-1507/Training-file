@@ -1,13 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const validateTask = require('../middleware/validateTask');
-
+const errorHandler = require('../middleware/errorHandler');
 router.post('/', validateTask, (req, res) => {
     res.status(201).json({
         message: 'Task created successfully',
         task: req.body
     });
 });
+// router.get('/test-error', (req, res, next) => {
+//     try {
+//         throw new Error('Testing error handler');
+//     } catch (err) {
+//         next(err);
+//     }
+// }); 
 // router.get('/', (req, res) => {
 //     res.status(200).json({
 //         message: 'Tasks retrieved successfully',
