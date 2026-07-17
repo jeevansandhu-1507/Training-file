@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.invoice-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.invoice-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.invoice-form button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.invoice-form button:hover {
+  background: #234fc5;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: royalblue;
+  color: white;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .invoice-form {
+    flex-direction: column;
+  }
+
+  .invoice-form input,
+  .invoice-form button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+  }
+}
